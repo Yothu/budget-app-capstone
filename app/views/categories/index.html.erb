@@ -1,1 +1,12 @@
-categories index!
+<div class="bg-white-1 vh-100">
+  <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= image_tag('menu-icon.png', :size => "23x23", :class => "left-arrow") %>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">CATEGORIES</h2>
+    <%= image_tag('search-icon.png', :size => "23x23", :class => "left-arrow") %>
+  </nav>
+  <div class="d-flex flex-column py-1 px-2">
+    <% @current_user.categories.each do |category| %>
+      <%= render 'category', category: category%>
+    <% end %>
+  </div>
+</div>

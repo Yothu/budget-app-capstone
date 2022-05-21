@@ -4,4 +4,8 @@ class Group < ActiveRecord::Base
 
   validates :name, presence: true
   validates :icon, presence: true
+
+  def date
+    "#{created_at.day} #{created_at.month} #{created_at.year}"
+  end
 end

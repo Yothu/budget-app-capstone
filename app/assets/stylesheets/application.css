@@ -3,6 +3,7 @@
   --second: #5fb523;
   --text: #434b54;
   --white1: #f5f6f8;
+  --gray1: #e4e6e5;
 }
 
 .font-proxima-light {
@@ -39,6 +40,10 @@
   color: var(--text);
 }
 
+.border-gray-1 {
+  border-color: var(--gray1);
+}
+
 .left-arrow {
   background-color: transparent;
   filter: invert(100%);
@@ -47,4 +52,17 @@
 
 .no-outline {
   outline: none;
+}
+
+.category {
+  box-shadow: 1px 1px 1px 1px gray;
+}
+
+.category-image {
+  height: 4rem;
+  width: 4rem;
+}
+
+.category-date {
+ font-size: 0.7rem;
 }
