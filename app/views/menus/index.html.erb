@@ -1,9 +1,9 @@
-<div class="bg-white">
-  <div>
-    <h1 class="font-kitten">Budgets!</h1>
+<div class="d-flex flex-wrap bg-white vh-100">
+  <div class="d-flex w-100 my-auto justify-content-center h-75 align-items-center">
+    <h1 class="font-kitten color-text m-0">Budgets!</h1>
   </div>
-  <div>
-    <%= button_to "Sign In", new_user_session_path, method: :get %>
-    <%= button_to "Sign Up", new_user_registration_path, method: :get %>
+  <div class="d-flex flex-column align-self-end mx-2 w-100">
+    <%= button_to "LOG IN", new_user_session_path, method: :get, class: 'py-2 my-1 w-100 bg-main text-white font-proxima-light border-0 rounded fw-bold btn' %>
+    <%= button_to "SIGN UP", new_user_registration_path, method: :get, class: 'py-2 my-1 w-100 color-text font-proxima-light fw-bold bg-transparent border-0 btn' %>
   </div>
 </div>
