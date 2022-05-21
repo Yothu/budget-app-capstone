@@ -1,15 +1,53 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@font-face {
+  font-family: 'Proxima Nova Alt Lt';
+  src:
+    local('Proxima Nova Alt Light'),
+    local('ProximaNovaA-Light'),
+    url('ProximaNovaA-Light.woff2') format('woff2'),
+    url('ProximaNovaA-Light.woff') format('woff'),
+    url('ProximaNovaA-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src:
+    local('Proxima Nova Bold'),
+    local('ProximaNova-Bold'),
+    url('ProximaNova-Bold.woff2') format('woff2'),
+    url('ProximaNova-Bold.woff') format('woff'),
+    url('ProximaNova-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kitten Swash';
+  src:
+    local('Kitten Swash'),
+    local('KittenSwash'),
+    url('KittenSwash.woff2') format('woff2'),
+    url('KittenSwash.woff') format('woff'),
+    url('KittenSwash.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-proxima-light {
+  font-family: 'Proxima Nova Alt Lt', serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-proxima-bold {
+  font-family: 'Proxima Nova Rg', serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.font-kitten {
+  font-family: 'Kitten Swash', serif;
+  font-weight: normal;
+  font-style: normal;
+}
