@@ -2,6 +2,7 @@
   --main: #3778c2;
   --second: #5fb523;
   --text: #434b54;
+  --white1: #f5f6f8;
 }
 
 .font-proxima-light {
@@ -30,6 +31,16 @@
   background-color: var(--second);
 }
 
+.bg-white-1 {
+  background-color: var(--white1);
+}
+
 .color-text {
   color: var(--text);
+}
+
+.left-arrow {
+  background-color: transparent;
+  filter: invert(100%);
+  border: none;
 }
