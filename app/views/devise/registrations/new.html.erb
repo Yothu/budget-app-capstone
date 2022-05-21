@@ -10,19 +10,19 @@
     
     <div class="d-flex flex-column w-100 px-3 my-3 bg-white">
       <div class="d-flex flex-column align-items-stretch">
-        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Full name', class: 'border-0 color-text py-2' %>
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Full name', class: 'no-outline border-0 color-text py-2' %>
       </div>
-      <hr class="m-0">
+      <hr class="my-1">
       <div class="d-flex flex-column align-items-stretch">
-        <%= f.email_field :email, autocomplete: "email", placeholder: 'Email', class: 'border-0 color-text py-2' %>
+        <%= f.email_field :email, autocomplete: "email", placeholder: 'Email', class: 'no-outline border-0 color-text py-2' %>
       </div>
-      <hr class="m-0">
+      <hr class="my-1">
       <div class="d-flex flex-column align-items-stretch">
-        <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password', class: 'border-0 color-text py-2' %>
+        <%= f.password_field :password, autocomplete: "new-password", placeholder: 'Password', class: 'no-outline border-0 color-text py-2' %>
       </div>
-      <hr class="m-0">
+      <hr class="my-1">
       <div class="d-flex flex-column align-items-stretch">
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm Password', class: 'border-0 color-text py-2' %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: 'Confirm Password', class: 'no-outline border-0 color-text py-2' %>
       </div>
     </div>
   <% end %>  

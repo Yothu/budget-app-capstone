@@ -44,3 +44,7 @@
   filter: invert(100%);
   border: none;
 }
+
+.no-outline {
+  outline: none;
+}
