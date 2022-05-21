@@ -10,32 +10,39 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_20_005213) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_21_192504) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "deals", force: :cascade do |t|
-    t.string "name", null: false
-    t.string "amount", default: "0", null: false
-    t.integer "author_id", null: false
+    t.string "name"
+    t.integer "amount"
+    t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_deals_on_author_id"
   end
 
+  create_table "group_deals", force: :cascade do |t|
+    t.integer "deal_id"
+    t.integer "group_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deal_id"], name: "index_group_deals_on_deal_id"
+    t.index ["group_id"], name: "index_group_deals_on_group_id"
+  end
+
   create_table "groups", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.string "icon"
-    t.integer "author_id", null: false
-    t.integer "deal_id", null: false
+    t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_groups_on_author_id"
-    t.index ["deal_id"], name: "index_groups_on_deal_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
@@ -48,6 +55,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_20_005213) do
   end
 
   add_foreign_key "deals", "users", column: "author_id", on_delete: :cascade
-  add_foreign_key "groups", "deals", on_delete: :cascade
+  add_foreign_key "group_deals", "deals", on_delete: :cascade
+  add_foreign_key "group_deals", "groups", on_delete: :cascade
   add_foreign_key "groups", "users", column: "author_id", on_delete: :cascade
 end
