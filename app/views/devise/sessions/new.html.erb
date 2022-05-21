@@ -1,26 +1,26 @@
-<h2>Log in</h2>
+<div class="bg-white-1 vh-100">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= render 'devise/shared/guest_navbar', f: f %>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+  <div class="d-flex flex-column w-100 px-3 my-3 bg-white">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'no-outline border-0 color-text py-2 font-proxima-light' %>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <hr class="my-1">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'no-outline border-0 color-text py-2 font-proxima-light' %>
+    </div>
+    <hr class="my-1">
+    <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me%>
+      <%= f.label :remember_me, class: 'color-text font-proxima-light'  %>
+    </div>
+    <% end %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <% end %>
+  <div class="d-flex justify-content-center">
+    <%= render "devise/shared/links" %>
+  </div>
+  <%= render "devise/shared/error_messages", resource: resource %>
+</div>

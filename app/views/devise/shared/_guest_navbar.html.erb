@@ -1,0 +1,11 @@
+<nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+  <%= link_to root_path, method: :get, type: 'button',class: 'left-arrow'  do %>
+    <%= image_tag('navbar-left-arrow.png', :size => "23x23") %>
+  <% end %>
+  <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">
+    <%= 'REGISTER' if current_page?(new_user_registration_path) %>
+    <%= 'LOGIN' if current_page?(new_user_session_path) %>
+  </h2>
+  <%= f.submit "Next" , class: 'font-proxima-light bg-main border-0 text-white btn p-0' if current_page?(new_user_registration_path) %>
+  <%= f.submit "Log In" , class: 'font-proxima-light bg-main border-0 text-white btn p-0' if current_page?(new_user_session_path) %>
+</nav>
