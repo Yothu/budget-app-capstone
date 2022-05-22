@@ -1,8 +1,8 @@
 <div class="category d-flex p-2 bg-white border-gray-1 rounded my-1">
-  <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-search-strong-512.png" alt="image" class="category-image align-self-center border border-gray-1 rounded">
+  <img src="#{<%= category.icon %>}" alt="image" class="category-image align-self-center border border-gray-1 rounded">
   <div class="flex-grow-1 d-flex flex-column justify-content-end mx-1">
     <h3 class="color-text font-proxima-bold fs-6"><%= category.name %></h3>
     <span class="category-date color-text"><%= category.date %></span>
   </div>
-  <span class="align-self-center color-text">$12000</span>
+  <span class="align-self-center color-text"><%= category.total %></span>
 </div>

@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_21_192504) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_22_004532) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "deals", force: :cascade do |t|
     t.string "name"
-    t.integer "amount"
+    t.decimal "amount", default: "0.0", null: false
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -38,6 +38,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_21_192504) do
     t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "total_amount", default: "0.0", null: false
     t.index ["author_id"], name: "index_groups_on_author_id"
   end
 
