@@ -66,3 +66,17 @@
 .category-date {
   font-size: 0.7rem;
 }
+
+.success {
+  background-color: var(--second);
+}
+
+.error {
+  background-color: red;
+}
+
+.generic-alert {
+  margin: 0.6rem;
+  text-align: center;
+  color: var(--white1);
+}

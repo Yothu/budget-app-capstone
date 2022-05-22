@@ -6,7 +6,12 @@
     <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">CATEGORIES</h2>
     <%= image_tag('search-icon.png', :size => "23x23", :class => "left-arrow") %>
   </nav>
-  <div class="d-flex flex-column py-1 px-2">
+
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+
+  <div class="d-flex flex-column py-1 px-2 mb-5">
     <% @current_user.categories.each do |category| %>
       <%= render 'category', category: category%>
     <% end %>
