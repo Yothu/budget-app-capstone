@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Login page', type: :system do
+RSpec.describe 'Login page', type: :feature do
   describe 'Visiting the login page' do
     before(:each) do
       User.destroy_all
