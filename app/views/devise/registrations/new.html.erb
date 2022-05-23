@@ -1,5 +1,5 @@
 <div class="bg-white-1 vh-100">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: { turbo: false }) do |f| %>
     <%= render 'devise/shared/guest_navbar', f: f %>
     
     <div class="d-flex flex-column w-100 px-3 my-3 bg-white">
