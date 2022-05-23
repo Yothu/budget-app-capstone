@@ -86,6 +86,15 @@ a {
 }
 
 .transaction-image {
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
+}
+
+.check-box-form > label {
+  color: var(--text);
+  font-family: 'Proxima Nova Alt Lt', serif;
+}
+
+.check-box-form > label > input {
+  margin-right: 0.5rem;
 }
