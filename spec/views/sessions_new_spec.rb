@@ -9,15 +9,15 @@ RSpec.describe 'Login page', type: :feature do
       visit new_user_session_path
     end
 
-    it 'shoud have en email input' do
+    it 'shoud have an email input' do
       expect(assert_selector('input.session-email')).to eq(true)
     end
 
-    it 'shoud have en password input' do
+    it 'shoud have a password input' do
       expect(assert_selector('input.session-password')).to eq(true)
     end
 
-    it 'shoud have login button' do
+    it 'shoud have a login button' do
       expect(page).to have_button('Log In')
     end
 
