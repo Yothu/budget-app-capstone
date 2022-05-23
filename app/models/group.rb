@@ -1,4 +1,4 @@
-class Group < ActiveRecord::Base
+class Group < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :group_deals, foreign_key: 'group_id', class_name: 'GroupDeal', dependent: :delete_all
 
@@ -7,7 +7,7 @@ class Group < ActiveRecord::Base
   validates :total_amount, numericality: { greater_than_or_equal_to: 0 }
 
   def date
-    "#{created_at.day} #{created_at.month} #{created_at.year}"
+    "#{created_at.day}/#{created_at.month}/#{created_at.year}"
   end
 
   def total

@@ -11,7 +11,7 @@ class CategoriesController < ApplicationController
     new_category = current_user.groups.new(category_params)
 
     if new_category.save
-      redirect_to authenticated_user_root_path
+      redirect_to user_path
       flash[:success] = 'Category was created!'
     else
       redirect_to new_category_path

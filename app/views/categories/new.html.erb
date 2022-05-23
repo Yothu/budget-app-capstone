@@ -1,7 +1,7 @@
 <div class="bg-white-1 vh-100">
   <%= form_with model: @group, url: categories_path, method: :post do |f| %>
   <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
-    <%= link_to authenticated_user_root_path, method: :get, type: 'button' do %>
+    <%= link_to user_path, method: :get, type: 'button' do %>
       <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
     <% end %>
     <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">ADD CATEGORY</h2>
