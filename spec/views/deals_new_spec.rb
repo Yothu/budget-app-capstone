@@ -16,7 +16,7 @@ RSpec.describe 'Deal', type: :feature do
       @g1.save
 
       @g2 = @u1.groups.new(id: 44, name: 'Sport',
-        icon: 'https://cdn3.iconfinder.com/data/icons/achievement-1/512/goal-success-achievement-20-512.png')
+                           icon: 'https://cdn3.iconfinder.com/data/icons/achievement-1/512/goal-success-achievement-20-512.png')
       @g2.save
 
       visit new_user_session_path
