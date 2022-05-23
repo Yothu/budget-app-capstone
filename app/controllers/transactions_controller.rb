@@ -22,10 +22,10 @@ class TransactionsController < ApplicationController
           end
         end
         redirect_to category_transactions_path(category_id: params[:category_id])
-        flash[:succes] = 'Transaction created successfully!'
+        flash[:success] = 'Transaction created successfully!'
       else
         reload_page
-        flash[:error] = 'Transaction was not created!'
+        flash[:error] = 'Add Name and Amount!'
       end
     else
       reload_page
@@ -36,7 +36,8 @@ class TransactionsController < ApplicationController
   private
 
   def at_least_one_check_box
-    return false if selected_categories_ids.length.zero?
+
+    return false if selected_categories_ids.nil?
 
     true
   end
