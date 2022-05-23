@@ -1,0 +1,23 @@
+<div class="bg-white-1 vh-100 position-relative">
+  <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to destroy_user_session_path, type: 'button' do %>
+      <%= image_tag('menu-icon.png', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">CATEGORIES</h2>
+    <%= image_tag('search-icon.png', :size => "23x23", :class => "left-arrow") %>
+  </nav>
+
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+
+  <div class="d-flex flex-column py-1 px-2 mb-5">
+    <% @current_user.categories.each do |category| %>
+      <%= render 'category', category: category%>
+    <% end %>
+  </div>
+
+  <footer class="bg-second p-2 container fixed-bottom">
+    <%= button_to 'ADD CATEGORY', new_category_path, method: :get, class: 'text-white font-proxima-light fs-6 bg-second border border-white rounded w-100 py-2 col-12 btn' %>
+  </footer>
+</div>
