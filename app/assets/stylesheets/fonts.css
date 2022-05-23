@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Proxima Nova Alt Lt';
+  src:
+    local('Proxima Nova Alt Light'),
+    local('ProximaNovaA-Light'),
+    url('ProximaNovaA-Light.woff2') format('woff2'),
+    url('ProximaNovaA-Light.woff') format('woff'),
+    url('ProximaNovaA-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova Rg';
+  src:
+    local('Proxima Nova Bold'),
+    local('ProximaNova-Bold'),
+    url('ProximaNova-Bold.woff2') format('woff2'),
+    url('ProximaNova-Bold.woff') format('woff'),
+    url('ProximaNova-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kitten Swash';
+  src:
+    local('Kitten Swash'),
+    local('KittenSwash'),
+    url('KittenSwash.woff2') format('woff2'),
+    url('KittenSwash.woff') format('woff'),
+    url('KittenSwash.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
