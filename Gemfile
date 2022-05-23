@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.1'
 
 gem 'bootsnap', require: false
+gem 'cancancan'
 gem 'devise'
 gem 'importmap-rails'
 gem 'jbuilder'

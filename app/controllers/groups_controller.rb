@@ -1,4 +1,6 @@
-class CategoriesController < ApplicationController
+class GroupsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @current_user = current_user
   end
@@ -8,20 +10,20 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    new_category = current_user.groups.new(category_params)
+    new_group = current_user.groups.new(group_params)
 
-    if new_category.save
+    if new_group.save
       redirect_to user_path
       flash[:success] = 'Category was created!'
     else
-      redirect_to new_category_path
+      redirect_to new_group_path
       flash[:error] = 'Category was not created!'
     end
   end
 
   private
 
-  def category_params
+  def group_params
     params.require(:group).permit(:name, :icon)
   end
 end
