@@ -12,12 +12,12 @@
   <% end -%>
 
   <div class="d-flex flex-column py-1 px-2 mb-5">
-    <% @current_user.categories.each do |category| %>
-      <%= render 'category', category: category%>
+    <% @current_user.groups.each do |group| %>
+      <%= render 'group', group: group %>
     <% end %>
   </div>
 
   <footer class="bg-second p-2 container fixed-bottom">
-    <%= button_to 'ADD CATEGORY', new_category_path, method: :get, class: 'text-white font-proxima-light fs-6 bg-second border border-white rounded w-100 py-2 col-12 btn' %>
+    <%= button_to 'ADD CATEGORY', new_group_path, method: :get, class: 'text-white font-proxima-light fs-6 bg-second border border-white rounded w-100 py-2 col-12 btn' %>
   </footer>
 </div>

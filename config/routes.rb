@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated do
-      root to: 'categories#index', as: 'user'
+      root to: 'groups#index', as: 'user'
     end
 
     unauthenticated do
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     get '/auth/logout', to: 'devise/sessions#destroy'
   end
 
-  resources :categories, only: %i[index new create] do
-    resources :transactions, only: %i[index new create]
+  resources :groups, only: %i[index new create] do
+    resources :deals, only: %i[index new create]
   end
 end
