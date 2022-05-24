@@ -11,9 +11,9 @@
 - Ruby on Rails
 - Bootstrap, RSpec, PostgreSQL
 
-## Live Demo (not available)
+## Live Demo
 
-Check this [live demo]() of the page!
+Check this [live demo](https://intense-mesa-48756.herokuapp.com/) of the page!
 
 ## Getting Started
 
