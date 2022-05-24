@@ -36,7 +36,6 @@ class TransactionsController < ApplicationController
   private
 
   def at_least_one_check_box
-
     return false if selected_categories_ids.nil?
 
     true
