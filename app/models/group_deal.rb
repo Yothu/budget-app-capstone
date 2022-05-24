@@ -1,4 +1,4 @@
-class GroupDeal < ActiveRecord::Base
+class GroupDeal < ApplicationRecord
   after_create :increase_category_total_amount
 
   belongs_to :deal, class_name: 'Deal'
