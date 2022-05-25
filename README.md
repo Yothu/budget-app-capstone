@@ -1,56 +1,99 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# BUDGETS!
 
-> Description the project.
+> Web application that allows you to record money transactions and separate them in categories!
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby
+- Ruby on Rails
+- Bootstrap, RSpec, PostgreSQL
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
-
+Check this [live demo](https://intense-mesa-48756.herokuapp.com/) of the page!
 
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
 
 
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
+To use this project you first need to have installed the following:
+
++ Node.js
++ Ruby
++ PostgreSQL
++ Rails
+
+* Ruby version
+
+The version of ruby that is needed for this project is 
+
++ 3.1.1
+
 ### Setup
 
+Once you have installed them, you need to use the following command to clone the repository:
+
+```git clone https://github.com/Yothu/budget-app-capstone.git```
+
+### Database creation
+
+Next, use this command to create the databases:
+```rake db:create```
+
+Use this command to run the migrations if necesessary:
+```rails db:migrate```
 ### Install
 
 ### Usage
 
+Finally, use the following command to initialize the live server:
+
+```rails s```
+
+
+#### Splash page
+
+First page an unloged user will usually access, at the bottom there are two buttons, **LOGIN** and **SIGNUP**, the first one to access an already created account, and the second to create an account.
+
+#### Categories page
+
+Once you have created or re accessed your account, you will be redirected to the **Categories page**, in it you will be able to see you recorded *categories*, for each category you can check the name, date of creation, its icon and the total amount of money transactioned.
+At the bottom of the page there is a button that says **ADD CATEGORY** that redirects you to the **Add Category** page.
+If you press a category you will be redirected to the **Transactions page**
+
+
+#### Add Category page
+
+In here you can add a category, just provide a name and an icon, then press *Save*. If you gave correct data, it will redirect you to the *Categories page*.
+
+#### Transactions page
+
+In here you can see the transactions recorded in a category, for each transaction you can see its name, date of creation and amount of money. Just below the toolbar you will see the total amount of transactioned money in that category.
+At the bottom of the page is a button that says **ADD TRANSACTION** that will redirect you to the **Add Transaction page**
+
+#### Add Transaction page
+
+In here you can add a transaction to multiple categories, just add the name, amount and select at least one category. If you gave correct data, it will redirect you to the *Transactions page*
+
 ### Run tests
 
-### Deployment
+To check the test use the following command:
 
+```bundle exec rspec ./spec```
 
+## Author
 
-## Authors
+👤 **David Vergaray**
 
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub:   [@Yothu](https://github.com/Yothu)
+- Twiter:   [@Daivhy](https://twitter.com/Daivhy)
+- LinkedIn: [David Vergaray](https://www.linkedin.com/in/david-vergaray-almontes-051a11127/)
 
 ## 🤝 Contributing
 
@@ -64,9 +107,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Thanks to my family for all the support that thay give me.
+- [Original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) created by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
 
 ## 📝 License
 

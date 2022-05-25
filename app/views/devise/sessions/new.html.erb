@@ -1,0 +1,26 @@
+<div class="bg-white-1 vh-100">
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }) do |f| %>
+  <%= render 'devise/shared/guest_navbar', f: f %>
+
+  <div class="inner-form d-flex flex-column w-100 px-3 my-3 bg-white">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Email', class: 'session-email no-outline border-0 color-text py-2 font-proxima-light' %>
+    </div>
+    <hr class="my-1">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Password', class: 'session-password no-outline border-0 color-text py-2 font-proxima-light' %>
+    </div>
+    <hr class="my-1">
+    <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me%>
+      <%= f.label :remember_me, class: 'color-text font-proxima-light'  %>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+  <div class="d-flex justify-content-center">
+    <%= render "devise/shared/links" %>
+  </div>
+  <%= render "devise/shared/error_messages", resource: resource %>
+</div>

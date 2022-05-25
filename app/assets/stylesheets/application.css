@@ -1,0 +1,100 @@
+:root {
+  --main: #3778c2;
+  --second: #5fb523;
+  --text: #434b54;
+  --white1: #f5f6f8;
+  --gray1: #e4e6e5;
+}
+
+.font-proxima-light {
+  font-family: 'Proxima Nova Alt Lt', serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-proxima-bold {
+  font-family: 'Proxima Nova Rg', serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.font-kitten {
+  font-family: 'Kitten Swash', serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bg-main {
+  background-color: var(--main);
+}
+
+.bg-second {
+  background-color: var(--second);
+}
+
+.bg-white-1 {
+  background-color: var(--white1);
+}
+
+.color-text {
+  color: var(--text);
+}
+
+.border-gray-1 {
+  border-color: var(--gray1);
+}
+
+.left-arrow {
+  background-color: transparent;
+  filter: invert(100%);
+  border: none;
+}
+
+.no-outline {
+  outline: none;
+}
+
+.category {
+  box-shadow: 1px 1px 1px 1px gray;
+}
+
+.category-image {
+  height: 4rem;
+  width: 4rem;
+}
+
+.category-date {
+  font-size: 0.7rem;
+}
+
+.success {
+  background-color: var(--second);
+}
+
+.error {
+  background-color: red;
+}
+
+.generic-alert {
+  margin: 0.6rem;
+  text-align: center;
+  color: var(--white1);
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.transaction-image {
+  height: 2rem;
+  width: 2rem;
+}
+
+.check-box-form > label {
+  color: var(--text);
+  font-family: 'Proxima Nova Alt Lt', serif;
+}
+
+.check-box-form > label > input {
+  margin-right: 0.5rem;
+}

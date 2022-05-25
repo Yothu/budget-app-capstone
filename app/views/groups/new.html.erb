@@ -1,0 +1,24 @@
+<div class="bg-white-1 vh-100">
+  <%= form_with model: @group, url: groups_path, method: :post do |f| %>
+  <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to user_path, method: :get, type: 'button' do %>
+      <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">ADD CATEGORY</h2>
+    <%= f.submit "Save" , class: 'font-proxima-light bg-main border-0 text-white btn p-0' %>
+  </nav>
+
+  <div class="d-flex flex-column w-100 px-3 my-3 bg-white">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', class: 'group-name no-outline border-0 color-text py-2 font-proxima-light' %>
+    </div>
+    <hr class="my-1">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.text_field :icon, autocomplete: "icon", placeholder: 'Icon URL', class: 'group-icon no-outline border-0 color-text py-2 font-proxima-light' %>
+    </div>
+  </div>
+  <% end %>
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+</div>

@@ -1,0 +1,31 @@
+<div class="bg-white-1 vh-100 position-relative">
+  <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to user_path, type: 'button' do %>
+      <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">TRANSACTIONS</h2>
+    <%= image_tag('search-icon.png', :size => "23x23", :class => "left-arrow") %>
+  </nav>
+  <div class="bg-white border-gray-1 py-1 px-2 d-flex">
+    <img src="<%= @group.icon %>" alt="image" class="transaction-image align-self-center border border-gray-1 rounded-circle">
+    <span class="font-proxima-light color-text flex-grow-1 align-self-center mx-3">
+      <%= @group.name%>
+    </span>
+    <span class="font-proxima-light color-text align-self-center">
+      Total: <%= @group.total %>
+    </span>
+  </div>
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+
+  <div class="d-flex flex-column py-1 px-2 mb-5">
+    <% @group_deals.each do |group_deal| %>
+      <%= render 'deal', deal: group_deal %>
+    <% end %>
+  </div>
+
+  <footer class="bg-second p-2 container fixed-bottom">
+    <%= button_to 'ADD TRANSACTION', new_group_deal_path, method: :get, class: 'text-white font-proxima-light fs-6 bg-second border border-white rounded w-100 py-2 col-12 btn' %>
+  </footer>
+</div>

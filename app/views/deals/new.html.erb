@@ -1,0 +1,34 @@
+<div class="bg-white-1 vh-100">
+  <%= form_with url: group_deals_path, method: :post do |f| %>
+  <nav class="bg-main d-flex justify-content-between p-2 align-items-center">
+    <%= link_to group_deals_path(@group), method: :get, type: 'button' do %>
+      <%= image_tag('navbar-left-arrow.png', :size => "23x23", :class => "left-arrow") %>
+    <% end %>
+    <h2 class="font-proxima-light fw-bold my-0 text-white fs-6">ADD TRANSACTION</h2>
+    <%= f.submit "Save" , class: 'font-proxima-light bg-main border-0 text-white btn p-0' %>
+  </nav>
+
+  <div class="d-flex flex-column w-100 px-3 my-3 bg-white">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Name', class: 'deal-name no-outline border-0 color-text py-2 font-proxima-light' %>
+    </div>
+    <hr class="my-1">
+    <div class="d-flex flex-column align-items-stretch">
+      <%= f.number_field :amount, autocomplete: "amount", placeholder: 'Amount', class: 'deal-amount no-outline border-0 color-text py-2 font-proxima-light' %>
+    </div>
+    <div>
+      <%= f.label :groups, "Categories", class: 'font-proxima-bold color-text' %>
+      <div class="check-box-form d-flex flex-column">
+        <%= f.collection_check_boxes :groups, @groups, :id, :name, { include_hidden: false }  do |b| %>
+          <%= b.label { b.check_box + b.text } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <% end %>
+
+  <% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: "#{name} generic-alert" %>
+  <% end -%>
+</div>
