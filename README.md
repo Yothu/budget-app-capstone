@@ -108,7 +108,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to my family for all the support that thay give me.
-- [Original design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015) created by [minimmmal](https://www.behance.net/adagio07) in Behance.
+- [Original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) created by [minimmmal](https://www.behance.net/gregoirevella) in Behance.
 
 ## 📝 License
 
