@@ -108,7 +108,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 - Thanks to my family for all the support that thay give me.
-- [Original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) created by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) in Behance.
+- [Original design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=) created by [Gregoire Vella](https://www.behance.net/gregoirevella) on Behance.
 
 ## 📝 License
 
